@@ -11,11 +11,11 @@ import java.lang.Math;
  *
  * @author a1614193
  */
-public class Equacao2Grau {
+public class Equacao2Grau<N extends Number> {
 
-    private Number a, b, c;
+    private N a, b, c;
 
-    public Equacao2Grau(Number a, Number b, Number c) {
+    public Equacao2Grau(N a, N b, N c) {
         if (a.doubleValue() == 0.0) {
             throw new RuntimeException("Coeficiente a não pode ser zero");
         }
@@ -24,30 +24,30 @@ public class Equacao2Grau {
         this.c = c;
     }
 
-    public Number getA() {
+    public N getA() {
         return a;
     }
 
-    public Number getB() {
+    public N getB() {
         return b;
     }
 
-    public Number getC() {
+    public N getC() {
         return c;
     }
 
-    public void setA(Number a) {
+    public void setA(N a) {
         if (a.doubleValue() == 0.0) {
             throw new RuntimeException("Coeficiente a não pode ser zero");
         }
         this.a = a;
     }
 
-    public void setB(Number b) {
+    public void setB(N b) {
         this.b = b;
     }
 
-    public void setC(Number c) {
+    public void setC(N c) {
         this.c = c;
     }
 
